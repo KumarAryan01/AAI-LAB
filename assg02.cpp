@@ -23,26 +23,43 @@ bool canFinish(int students, int K, int days, bool delay) {
     unordered_map<int,int> deg = indeg;
     vector<vector<int>> nextDay(days + 2);
 
+ // Step 1: Initialize Queue
+Push tasks with no dependencies.
+
     for(auto &t : tasks)
         if(deg[t.id] == 0)
             q.push(t.id);
 
     int done = 0;
 
+//Step 2: Day-by-Day Simulation
+
+
     for(int day = 1; day <= days; day++) {
 
         vector<int> left(students, K);
         queue<int> temp;
+// Used for tasks that couldn't be assigned today.
+
+Step 3: Assign Tasks
+try to assign available tasks.
+For each task:
+Try assigning to some student
+If student has enough prompts:
 
         while(!q.empty()) {
             int cur = q.front(); q.pop();
             bool assigned = false;
+
+//If student has enough prompts
 
             for(int i = 0; i < students; i++) {
                 if(left[i] >= need[cur]) {
                     left[i] -= need[cur];
                     assigned = true;
                     done++;
+
+Step 4: Unlock Children (check delay / If No Delay)
 
                     for(int nxt : graph[cur]) {
                         deg[nxt]--;
@@ -98,6 +115,8 @@ int main(int argc, char** argv) {
         }
     }
 
+MODE 1 & 3 — Minimum Days
+
     if(mode == 1 || mode == 3) {
         int K = val;
         for(int d = 1; ; d++) {
@@ -107,6 +126,11 @@ int main(int argc, char** argv) {
             }
         }
     }
+
+
+MODE 2 & 4 — Minimum Prompts
+Binary Search.
+
     else {
         int days = val;
         int lo = 1, hi = 0;
@@ -115,6 +139,9 @@ int main(int argc, char** argv) {
         int ans = hi;
         while(lo <= hi) {
             int mid = (lo + hi) / 2;
+
+If works → try smaller.
+Else → increase.
             if(canFinish(students, mid, days, delay)) {
                 ans = mid;
                 hi = mid - 1;
@@ -124,3 +151,4 @@ int main(int argc, char** argv) {
         cout << "Minimum prompts per student = " << ans << "\n";
     }
 }
+
