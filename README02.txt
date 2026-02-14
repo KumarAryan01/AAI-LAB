@@ -30,3 +30,9 @@ assg02 <input-file> 3 N K
 Mode 4:
 Same as Mode 2 but with 6am solution-sharing delay.
 assg02 <input-file> 4 N M
+
+
+
+
+
+https://chatgpt.com/share/698fea44-aa04-8009-b693-48812e06e086
