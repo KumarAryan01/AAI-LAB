@@ -36,3 +36,5 @@ assg02 <input-file> 4 N M
 
 
 https://chatgpt.com/share/698fea44-aa04-8009-b693-48812e06e086
+
+https://chatgpt.com/share/699768b0-359c-8009-90de-b8c7a45c07c7
