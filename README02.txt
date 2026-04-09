@@ -36,6 +36,7 @@ assg02 <input-file> 4 N M
 
 https://chatgpt.com/share/69c58400-6f84-8324-aa88-4f06fee03f34                (PROJECT 1)
 https://chatgpt.com/share/69d80822-1aac-8321-84ea-21bf997ae643                (PROJECT 2) 
+https://github.com/ManishBangari/AAI-Project-Garage-Scheduling-                (PROJECT 2 CODE GITHUB)
 https://chatgpt.com/share/698fea44-aa04-8009-b693-48812e06e086                 (ASSG 2)
 https://chatgpt.com/share/69d80886-1e94-8324-bd07-bd02740e405d                  (ASSG 4 )
 
